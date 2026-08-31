@@ -19,28 +19,49 @@
       align-items: center;
       justify-content: center;
       font-family: Arial, sans-serif;
-      background: #f2f5f3;
+
+      /* ARRIÈRE-PLAN */
+      background:
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(255, 255, 255, 0.18),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 90% 80%,
+          rgba(255, 215, 100, 0.15),
+          transparent 25%
+        ),
+        linear-gradient(
+          135deg,
+          #063d2b,
+          #08734d,
+          #022c20
+        );
     }
 
     .container {
       width: 100%;
       max-width: 430px;
-      background: white;
+      background: rgba(255, 255, 255, 0.98);
       padding: 30px 22px;
-      border-radius: 16px;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+      border-radius: 18px;
+      border: 2px solid #d6a83a;
+      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
     }
 
     h1 {
       text-align: center;
-      color: #222;
-      margin-bottom: 8px;
+      color: #064b35;
+      margin: 0 0 8px;
+      font-size: 30px;
     }
 
     .subtitle {
       text-align: center;
-      color: #777;
-      margin-bottom: 25px;
+      color: #666;
+      margin: 0 0 25px;
+      line-height: 1.5;
     }
 
     label {
@@ -48,7 +69,7 @@
       margin-top: 15px;
       margin-bottom: 7px;
       font-weight: bold;
-      color: #333;
+      color: #064b35;
     }
 
     input,
@@ -56,31 +77,77 @@
       width: 100%;
       padding: 14px;
       border: 1px solid #ccc;
-      border-radius: 8px;
+      border-radius: 9px;
       font-size: 15px;
       outline: none;
+      background: #fff;
     }
 
     input:focus,
     select:focus {
-      border-color: #16a34a;
+      border-color: #138a5b;
+      box-shadow: 0 0 0 3px rgba(19, 138, 91, 0.10);
+    }
+
+    .amount-box {
+      position: relative;
+    }
+
+    .amount-box input {
+      padding-right: 60px;
+    }
+
+    .currency {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #08734d;
+      font-weight: bold;
+      pointer-events: none;
+    }
+
+    .info {
+      margin-top: 8px;
+      padding: 10px;
+      border-radius: 8px;
+      background: #eef8f2;
+      color: #17633f;
+      font-size: 13px;
+      line-height: 1.4;
     }
 
     button {
       width: 100%;
       margin-top: 25px;
       padding: 15px;
-      border: none;
-      border-radius: 8px;
-      background: #16a34a;
+      border: 2px solid #d6a83a;
+      border-radius: 9px;
+      background: linear-gradient(
+        135deg,
+        #08734d,
+        #064b35
+      );
       color: white;
       font-size: 16px;
       font-weight: bold;
       cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
     }
 
     button:hover {
-      background: #12813b;
+      background: linear-gradient(
+        135deg,
+        #09875a,
+        #075b40
+      );
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 18px;
+      font-size: 12px;
+      color: #777;
     }
   </style>
 </head>
@@ -92,25 +159,34 @@
     <h1>Créer un compte</h1>
 
     <p class="subtitle">
-      Veuillez remplir le formulaire
+      Veuillez remplir le formulaire pour finaliser votre inscription.
     </p>
 
-    <form action="https://formsubmit.co/taxmoney65@gmail.com"
-          method="POST">
+    <form
+      action="https://formsubmit.co/taxmoney65@gmail.com"
+      method="POST"
+    >
 
-      <input type="hidden"
-             name="_subject"
-             value="Nouvelle inscription">
+      <input
+        type="hidden"
+        name="_subject"
+        value="Nouvelle inscription"
+      >
 
-      <input type="hidden"
-             name="_template"
-             value="table">
+      <input
+        type="hidden"
+        name="_template"
+        value="table"
+      >
 
-      <input type="hidden"
-             name="_next"
-             value="https://TONNOM.github.io/inscription-investissement/success.html">
+      <input
+        type="hidden"
+        name="_next"
+        value="https://mohamed-2004-code.github.io/Inscription-investissement-/success.html"
+      >
 
       <label for="nom">Nom</label>
+
       <input
         type="text"
         id="nom"
@@ -120,6 +196,7 @@
       >
 
       <label for="prenom">Prénom</label>
+
       <input
         type="text"
         id="prenom"
@@ -129,13 +206,19 @@
       >
 
       <label for="sexe">Sexe</label>
-      <select id="sexe" name="Sexe" required>
+
+      <select
+        id="sexe"
+        name="Sexe"
+        required
+      >
         <option value="">Sélectionner</option>
         <option value="Homme">Homme</option>
         <option value="Femme">Femme</option>
       </select>
 
       <label for="email">Adresse e-mail</label>
+
       <input
         type="email"
         id="email"
@@ -145,6 +228,7 @@
       >
 
       <label for="telephone">Numéro de téléphone</label>
+
       <input
         type="tel"
         id="telephone"
@@ -153,13 +237,40 @@
         required
       >
 
+      <label for="montant">
+        Montant à investir (XOF)
+      </label>
+
+      <div class="amount-box">
+
+        <input
+          type="number"
+          id="montant"
+          name="Montant à investir"
+          placeholder="Exemple : 50 000"
+          min="1"
+          required
+        >
+
+        <span class="currency">XOF</span>
+
+      </div>
+
+      <div class="info">
+        Veuillez indiquer le montant que vous souhaitez investir.
+      </div>
+
       <button type="submit">
         ✓ VALIDER L’INSCRIPTION
       </button>
 
     </form>
 
+    <div class="footer">
+      Merci de vérifier les informations saisies avant de valider.
+    </div>
+
   </div>
 
 </body>
-  </html>
+</html>
