@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Inscription réussie</title>
-
-  <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Inscription réussie</title>  <style>
     * {
       box-sizing: border-box;
     }
@@ -19,17 +14,35 @@
       align-items: center;
       justify-content: center;
       font-family: Arial, sans-serif;
-      background: #f2f5f3;
+
+      /* ARRIÈRE-PLAN */
+      background:
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(255, 255, 255, 0.18),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 90% 80%,
+          rgba(255, 215, 100, 0.15),
+          transparent 25%
+        ),
+        linear-gradient(
+          135deg,
+          #063d2b,
+          #08734d,
+          #022c20
+        );
     }
 
     .container {
       width: 100%;
       max-width: 430px;
-      background: white;
+      background: rgba(255, 255, 255, 0.98);
       padding: 40px 25px;
-      border-radius: 16px;
+      border-radius: 18px;
       text-align: center;
-      box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
     }
 
     .check {
@@ -43,16 +56,20 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      font-weight: bold;
     }
 
     h1 {
       color: #16a34a;
-      margin-bottom: 12px;
+      margin: 0 0 12px;
+      font-size: 28px;
     }
 
     p {
       color: #666;
       line-height: 1.6;
+      font-size: 16px;
+      margin: 0;
     }
 
     button {
@@ -65,32 +82,24 @@
       color: white;
       font-size: 16px;
       font-weight: bold;
+      cursor: pointer;
     }
 
     button:active {
       background: #12813b;
     }
-  </style>
-</head>
+  </style></head><body>  <div class="container"><div class="check">✓</div>
 
-<body>
+<h1>Inscription réussie !</h1>
 
-  <div class="container">
+<p>
+  Félicitations !<br>
+  Votre inscription a été enregistrée avec succès.
+</p>
 
-    <div class="check">✓</div>
+<button onclick="window.location.href='index.html'">
+  Retour à l'inscription
+</button>
 
-    <h1>Inscription réussie !</h1>
-
-    <p>
-      Félicitations !<br>
-      Votre inscription a été enregistrée avec succès.
-    </p>
-
-    <button onclick="window.location.href='index.html'">
-      Retour à l'inscription
-    </button>
-
-  </div>
-
-</body>
+  </div></body>
 </html>
