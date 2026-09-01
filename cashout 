@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cashout — Plateforme de démonstration</title>
+
+  <meta
+    name="description"
+    content="Cashout — plateforme de démonstration pour un projet scolaire."
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Arrière-plan -->
+  <div class="background">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <a href="#" class="logo">
+      <span class="logo-icon">C</span>
+      <span>Cashout</span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu">
+      ☰
+    </button>
+
+    <nav id="navMenu">
+      <a href="#accueil">Accueil</a>
+      <a href="#fonctionnalites">Fonctionnalités</a>
+      <a href="#apropos">À propos</a>
+      <button class="nav-login" id="loginBtn">Se connecter</button>
+    </nav>
+  </header>
+
+  <!-- Accueil -->
+  <main id="accueil">
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <div class="demo-badge">
+          <span class="status-dot"></span>
+          PROJET SCOLAIRE • MODE DÉMO
+        </div>
+
+        <h1>
+          Votre espace.
+          <span>Simplement.</span>
+        </h1>
+
+        <p class="hero-text">
+          Bienvenue sur <strong>Cashout</strong>, une interface moderne
+          conçue pour simuler la gestion de comptes, les soldes et
+          les opérations de retrait.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="primary-btn" id="startBtn">
+            Commencer
+            <span>→</span>
+          </button>
+
+          <a href="#fonctionnalites" class="secondary-btn">
+            Découvrir
+          </a>
+        </div>
+
+        <p class="security-text">
+          🔒 Environnement de démonstration sécurisé
+        </p>
+
+      </div>
+
+      <!-- Carte visuelle -->
+      <div class="hero-card-wrapper">
+
+        <div class="floating-card card-top">
+          <span>Solde disponible</span>
+          <strong>250 000 FCFA</strong>
+          <small>Compte démo</small>
+        </div>
+
+        <div class="main-card">
+
+          <div class="card-header">
+            <div>
+              <small>Cashout</small>
+              <p>ESPACE PERSONNEL</p>
+            </div>
+
+            <div class="card-chip">
+              ◇
+            </div>
+          </div>
+
+          <div class="card-balance">
+            <small>Solde disponible</small>
+            <strong>250 000</strong>
+            <span>FCFA</span>
+          </div>
+
+          <div class="card-footer">
+            <span>DEMONSTRATION</span>
+            <span>•••• 2026</span>
+          </div>
+
+        </div>
+
+        <div class="floating-card card-bottom">
+          <span>Retrait</span>
+          <strong>Disponible</strong>
+          <small>Mode simulation</small>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Fonctionnalités -->
+    <section class="features" id="fonctionnalites">
+
+      <div class="section-heading">
+        <span>FONCTIONNALITÉS</span>
+        <h2>Une expérience simple et moderne.</h2>
+        <p>
+          Une interface pensée pour présenter clairement
+          les différentes fonctions du projet.
+        </p>
+      </div>
+
+      <div class="features-grid">
+
+        <article class="feature-card">
+          <div class="feature-icon">👤</div>
+          <h3>Espace personnel</h3>
+          <p>
+            Chaque utilisateur dispose d'un espace personnel
+            avec ses informations et son solde de démonstration.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Solde en FCFA</h3>
+          <p>
+            Affichage clair du solde avec une interface
+            adaptée aux téléphones et ordinateurs.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">💸</div>
+          <h3>Retrait simulé</h3>
+          <p>
+            Parcours de retrait présenté comme une simulation
+            pour le projet scolaire.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Administration</h3>
+          <p>
+            Une future interface permettra de gérer les
+            comptes de démonstration depuis un espace administrateur.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- À propos -->
+    <section class="about" id="apropos">
+
+      <div class="about-card">
+
+        <div class="about-icon">
+          C
+        </div>
+
+        <div>
+          <span class="section-label">À PROPOS DE CASHOUT</span>
+
+          <h2>
+            Un projet conçu pour apprendre.
+          </h2>
+
+          <p>
+            Cashout est une plateforme de démonstration créée
+            dans le cadre d'un exercice scolaire. Elle permet
+            d'explorer la conception d'une interface web,
+            la gestion des utilisateurs et les parcours
+            d'une application financière simulée.
+          </p>
+
+          <div class="demo-warning">
+            <strong>Mode démonstration</strong>
+            <span>
+              Aucun paiement ou transfert d'argent réel n'est effectué.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Fenêtre de connexion -->
+  <div class="modal hidden" id="loginModal">
+
+    <div class="modal-box">
+
+      <button class="close-btn" id="closeModal">
+        ×
+      </button>
+
+      <div class="modal-logo">
+        <span>C</span>
+      </div>
+
+      <h2>Bienvenue sur Cashout</h2>
+
+      <p>
+        Connectez-vous à votre espace de démonstration.
+      </p>
+
+      <form id="loginForm">
+
+        <label for="email">
+          Adresse e-mail
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          placeholder="votre@email.com"
+          required
+        >
+
+        <label for="password">
+          Mot de passe
+        </label>
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Votre mot de passe"
+          required
+        >
+
+        <button type="submit" class="primary-btn full">
+          Se connecter →
+        </button>
+
+      </form>
+
+      <div class="modal-demo">
+        <span>MODE DÉMO</span>
+        <p>
+          La connexion sera reliée au système de comptes
+          dans les prochaines étapes du projet.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Notification -->
+  <div class="toast hidden" id="toast">
+    <span>✓</span>
+    <p id="toastMessage"></p>
+  </div>
+
+
+  <footer>
+    <div class="footer-content">
+
+      <div class="logo">
+        <span class="logo-icon">C</span>
+        <span>Cashout</span>
+      </div>
+
+      <p>
+        Projet scolaire • Mode démonstration
+      </p>
+
+      <span>
+        © 2026 Cashout
+      </span>
+
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
